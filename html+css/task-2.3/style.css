@@ -1,0 +1,37 @@
+
+
+.disc li {
+    list-style-type: disc;
+}
+
+.square li {
+    list-style-type: square;
+}
+
+.circle li {
+    list-style-type: circle;
+}
+
+.none li {
+    list-style-type: none;
+}
+
+
+.decimal li {
+    list-style-type: decimal;
+}
+
+.zeros li {
+    list-style-type: decimal-leading-zero;
+}
+
+.letters li {
+    list-style-type: lower-alpha;
+}
+
+.roman li {
+    list-style-type: lower-roman;
+}
+
+
+

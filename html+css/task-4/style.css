@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Вариант 1:
+Цвет всех элементов голубой, последний элемент темно-синий; */
+.breadcrumbs {
+    display: flex;
+    font-family: sans-serif;
+    margin: 30px auto;
+}
+
+.breadcrumbs__item {
+    list-style: none;
+    position: relative;
+    padding: 30px 50px 30px 80px;
+    background-color: lightblue;
+}
+
+.breadcrumbs__item:last-child {
+    padding: 30px 60px;
+    background-color: blue;
+}
+
+.breadcrumbs__link {
+    text-decoration: none;
+    color: #fff;
+    z-index: 1;
+}
+
+.breadcrumbs__item::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    z-index: 3;
+    top: 10px;
+    right: -30px;
+    border: 3px solid #fff;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+    background-color: lightblue;
+}
+
+.breadcrumbs__item:last-child::after {
+    border: none;
+    background-color: transparent;
+}
+/* end ---------------------------------------------------------------------- */
+
+
+/* Вариант 2:
+Цвет всех элементов голубой: при наведении - темно-синий. */
+
+.crumbs {
+    display: flex;
+    font-family: sans-serif;
+    margin: 30px auto;
+}
+
+.crumbs__item {
+    list-style: none;
+    position: relative;
+    padding: 30px 50px 30px 80px;
+    background-color: lightblue;
+}
+
+.crumbs__item:hover {
+    background-color: blue;
+}
+
+.crumbs__link {
+    text-decoration: none;
+    color: #fff;
+    z-index: 1;
+}
+
+.crumbs__item::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    z-index: 3;
+    top: 10px;
+    right: -30px;
+    border: 3px solid #fff;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+    background-color: lightblue;
+}
+
+.crumbs__item:hover::after {
+    background-color: blue;
+}
+
+.crumbs__item:last-child::after {
+    border: none;
+    background-color: transparent;
+}
+
+/* end ---------------------------------------------------------------------- */
+
+
+
+/* Реализовать и стилизовать радиокнопки на странице: */
+.container {
+    display: block;
+}
+
+.radio {
+    display: none;
+}
+
+.custom-radio {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 4px solid green;
+    position: relative;
+}
+
+.custom-radio:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: grey;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio:checked + .custom-radio:after {
+    background-color: green;
+}
+/* end ---------------------------------------------------------------------- */
+
+
+/* Реализовать trigger переключения кнопок с состояниями, как указано на рисунке: */
+.container {
+    display: block;
+}
+
+.check {
+    display: none;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    border: 1px solid grey;
+    height: 35px;
+    width: 70px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.custom-checkbox::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -2px;
+    left: -2px;
+}
+
+.check:checked + .custom-checkbox {
+    background-color: green;
+}
+
+.check:checked + .custom-checkbox::after {
+    left: 35px;
+}
